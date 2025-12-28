@@ -1,8 +1,8 @@
-# AsynchronousParallelJobScheduler
+# Asynchronous Parallel Job Scheduler
 
 ## Overview
 
-**AsynchronousParallelJobScheduler** is a lightweight, priority-aware, parallel job scheduler designed for asynchronous workloads.
+**Asynchronous Parallel Job Scheduler** is a lightweight, priority-aware, parallel job scheduler designed for asynchronous workloads.
 
 It supports:
 - **Bounded parallel execution**
