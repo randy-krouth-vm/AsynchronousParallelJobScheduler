@@ -53,6 +53,7 @@ namespace ParallelJobScheduler
                 }
 
             }
+            
             catch (Exception ex)
             {
                 Program.OutputExceptions(ex);
@@ -188,4 +189,5 @@ namespace ParallelJobScheduler
             }
         }
     }
+
 }
