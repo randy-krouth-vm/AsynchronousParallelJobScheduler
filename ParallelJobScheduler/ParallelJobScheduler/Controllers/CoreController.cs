@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 
@@ -32,7 +32,7 @@ namespace ParallelJobScheduler.Controllers
                     ResourceAllocator.bufferOne.AddJob(job);
                 }
 
-                return Ok(JsonSerializer.Serialize(new ResponseModel("Cold job succesfully added to queue.")));
+                return Ok(new ResponseModel("Cold job successfully added to queue."));
             }
 
             catch (Exception ex)
@@ -40,7 +40,7 @@ namespace ParallelJobScheduler.Controllers
                 Program.OutputExceptions(ex);
             }
 
-            return StatusCode(500, StatusCodes.Status500InternalServerError);
+            return StatusCode(StatusCodes.Status500InternalServerError, new ResponseModel("Failed to add cold jobs."));
         }
 
         [HttpGet("hot-job-request")]
@@ -55,7 +55,7 @@ namespace ParallelJobScheduler.Controllers
 
                 ResourceAllocator.bufferOne.AddJob(job);
 
-                return Ok(JsonSerializer.Serialize(new ResponseModel("Hot job succesfully added to queue.")));
+                return Ok(new ResponseModel("Hot job succesfully added to queue."));
             }
 
             catch (Exception ex)
@@ -63,7 +63,8 @@ namespace ParallelJobScheduler.Controllers
                 Program.OutputExceptions(ex);
             }
 
-            return StatusCode(500, StatusCodes.Status500InternalServerError);
+            return StatusCode(StatusCodes.Status500InternalServerError, new ResponseModel("Failed to add hot job."));
         }
     }
 }
+
