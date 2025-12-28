@@ -1,14 +1,15 @@
-﻿namespace ParallelJobScheduler
+namespace ParallelJobScheduler
 {
-    internal class ResponseModel
+    public class ResponseModel
     {
-        internal string response { get; set; } = "";
+        public string response { get; set; } = "";
 
-        internal ResponseModel() {  }
+        public ResponseModel() {  }
 
-        internal ResponseModel(string response)
+        public ResponseModel(string response)
         {
             this.response = response;
         }
     }
 }
+
