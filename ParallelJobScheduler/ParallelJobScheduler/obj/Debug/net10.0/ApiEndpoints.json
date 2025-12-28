@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "ParallelJobScheduler.Controllers.CoreController",
+    "Method": "ColdJobRequest",
+    "RelativePath": "api/core-controller/cold-job-request/{numberOfColdJobsToRun}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numberOfColdJobsToRun",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ParallelJobScheduler.Controllers.CoreController",
+    "Method": "HotJobRequest",
+    "RelativePath": "api/core-controller/hot-job-request",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

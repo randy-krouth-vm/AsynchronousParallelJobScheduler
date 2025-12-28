@@ -1,0 +1,51 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "ParallelJobScheduler",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/core-controller/cold-job-request/{numberOfColdJobsToRun}": {
+      "get": {
+        "tags": [
+          "Core"
+        ],
+        "parameters": [
+          {
+            "name": "numberOfColdJobsToRun",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 5
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/core-controller/hot-job-request": {
+      "get": {
+        "tags": [
+          "Core"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": { },
+  "tags": [
+    {
+      "name": "Core"
+    }
+  ]
+}

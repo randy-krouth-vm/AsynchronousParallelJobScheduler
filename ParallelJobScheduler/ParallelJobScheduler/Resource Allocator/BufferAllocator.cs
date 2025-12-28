@@ -2,7 +2,7 @@
 
 namespace ParallelJobScheduler
 {
-    public class BufferAllocator
+    internal class BufferAllocator
     {
         private CancellationTokenSource cancellationTokenSource { get; set; } = new CancellationTokenSource();
 
@@ -15,7 +15,7 @@ namespace ParallelJobScheduler
         private const int maxTaskCount = 5;
         private SemaphoreSlim semaphoreSlim { get; set; } = new SemaphoreSlim(maxTaskCount);
 
-        public async Task StartJobSchedulingService()
+        internal async Task StartJobSchedulingService()
         {
             for (int i = 0; i < maxTaskCount; i++)
             {
@@ -24,7 +24,7 @@ namespace ParallelJobScheduler
             }
         }
 
-        public void AddJob(Job job)
+        internal void AddJob(Job job)
         {
             try
             {
