@@ -39,6 +39,7 @@
                     T result = await function(token);
                     Completion.SetResult(result);
                 }
+                
                 catch (Exception ex)
                 {
                     Completion.SetException(ex);
@@ -54,3 +55,4 @@
         public static BufferAllocator bufferTwo = new BufferAllocator();
     }
 }
+
