@@ -43,6 +43,7 @@ namespace ParallelJobScheduler
                         if (activeColdJobs.Count >= 1)
                         {
                             Job coldJob = activeColdJobs[^1];
+                            activeColdJobs.Remove(coldJob);
                             coldJob.cancellationTokenSource.Cancel();
                             coldJob.cancellationTokenSource = new CancellationTokenSource();
                             coldQueue.Insert(0, coldJob);
@@ -191,3 +192,4 @@ namespace ParallelJobScheduler
     }
 
 }
+
