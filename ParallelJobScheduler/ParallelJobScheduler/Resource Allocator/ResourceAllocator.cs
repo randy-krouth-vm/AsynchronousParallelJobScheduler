@@ -47,7 +47,6 @@
                     catch (Exception ex)
                     {
                         Completion.SetException(ex);
-                        throw;
                     }
                 };
             }
@@ -60,4 +59,5 @@
         internal static BufferAllocator bufferTwo = new BufferAllocator();
     }
 }
+
 
